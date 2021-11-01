@@ -1,0 +1,15 @@
+body{ background: blue; }
+h2{
+    font-family: 'comic sans ms';
+    background-color: red;
+    text-align: center;
+}
+table{ background: grey; }
+.td{ font-weight: blod; }
+
+/* Tugas */
+form{
+    border: 3;
+    border-style: groove;
+    border-color: aqua;
+}
