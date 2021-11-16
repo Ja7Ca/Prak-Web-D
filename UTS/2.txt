@@ -1,0 +1,32 @@
+2a.
+Dokter
+INSERT INTO `dokter` (`id_dokter`, `nama_dokter`) VALUES 
+('DK001', 'Gamani Siregar'),
+('DK002', 'Hamima Hariyah'), 
+('DK003', 'Paiman Mustofa');
+
+Ruang
+INSERT INTO `ruang` (`id_ruang`, `nama_ruang`) VALUES 
+('RUA01', 'Anggrek 1'), 
+('RUA02', 'Anggrek 2'), 
+('RUA03', 'Anggrek 3');
+
+Pasien
+INSERT INTO `pasien` (`id_pasien`, `no_ktp`, `nama_pasien`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `nohp`, `agama`, `keluhan`, `id_dokter`) VALUES 
+('PS001', '3313120000000001', 'Talia Padmasari', 'Perempuan', '2001-01-01', 'Solo', '080000000001', 'Islam', 'sakit kepala, sakit di bagian perut', 'DK001'),
+('PS002', '3313120000000002', 'Ophelia Lailasari', 'Perempuan', '2002-01-01', 'Klaten', '080000000002', 'Islam', 'demam, batuk, hingga mengalami kesulitan bernapas', 'DK002'), ('PS003', '3313120000000003', 'Harja Adriansyah', 'Laki-Laki', '2003-01-01', 'Boyolali', '080000000003', 'Islam', 'diare disertai muntah yang hebat', 'DK003');
+
+Pembayaran
+INSERT INTO `pembayaran` (`id_pembayaran`, `id_dokter`, `id_pasien`, `id_ruang`, `diagnosa_penyakit`, `tgl_masuk`, `tgl_keluar`) VALUES 
+('PB001', 'DK001', 'PS001', 'RUA01', 'Flu', '2021-09-10', '2021-09-13'), 
+('PB002', 'DK002', 'PS002', 'RUA03', 'Pneumia', '2021-10-10', '2021-10-14'), 
+('PB003', 'DK003', 'PS003', 'RUA03', 'Kolera', '2021-11-10', '2021-11-15');
+
+2b. 
+SELECT * from pasien WHERE id_dokter = 'DK001';
+
+2c.
+select count(pasien.id_dokter) as 'jumlah pasien', dokter.nama_dokter FROM pasien INNER join dokter where pasien.id_dokter = dokter.id_dokter GROUP BY dokter.nama_dokter;
+
+2d.
+SELECT pembayaran.tgl_keluar-pembayaran.tgl_masuk as 'hari', pasien.nama_pasien FROM pembayaran INNER JOIN pasien on pembayaran.id_pasien=pasien.id_pasien WHERE pembayaran.tgl_keluar-pembayaran.tgl_masuk = (select max(pembayaran.tgl_keluar-pembayaran.tgl_masuk) from pembayaran);
