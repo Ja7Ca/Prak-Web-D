@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<?xml-stylesheet href="data2.css" type="text/css"?>
+<Mahasiswa>
+    <ID>
+        <NIM>L200190245</NIM>
+        <Nama>Ja7Ca</Nama>
+        <Kota>Sukoharjo</Kota>
+    </ID>
+    <ID>
+        <NIM>L200190246</NIM>
+        <Nama>Nawaites</Nama>
+        <Kota>Klaten</Kota>
+    </ID>
+    <ID>
+        <NIM>L200190247</NIM>
+        <Nama>Jarot Setiawan</Nama>
+        <Kota>Surakarta</Kota>
+    </ID>
+    <ID>
+        <NIM>L200190248</NIM>
+        <Nama>Setiawan Jarot</Nama>
+        <Kota>Colomadu</Kota>
+    </ID>
+    <ID>
+        <NIM>L200190249</NIM>
+        <Nama>Toraj</Nama>
+        <Kota>Boyolali</Kota>
+    </ID>
+</Mahasiswa>

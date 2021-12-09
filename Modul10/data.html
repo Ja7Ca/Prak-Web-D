@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+</head>
+<body>
+    <!-- Perc 4 -->
+    <xml ID='dsoData' src='data.xml' />
+    <h2>Data Mahasiswa</h2>
+    <table DATASRC='#dsoData' border="1" cellpadding='5'>
+        <thead>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Kota</th>
+        </thead>
+        <tr align="center">
+            <td><span DATAFLD='NIM'></span></td>
+            <td><span DATAFLD='Nama'></span></td>
+            <td><span DATAFLD='Kota'></span></td>
+        </tr>
+    </table>
+</body>
+</html>
